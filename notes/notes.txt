@@ -1,0 +1,35 @@
+cat is read
+ln is link ln /dir/
+alias
+echo
+ls -l read file
+cd directory
+/mnt/ get into windows
+rm -r remove
+man 'help command'
+pushd and popd thru dir
+\n = newline
+\t = tab
+\a = bell
+\b = backspace
+\r = carriage return
+\f = formfeed
+\v = vertical tab
+
+\\ = backslash
+\' = single quote
+\" = double quote
+\? = question mark.
+
+String Length
+//----Returns the length of s1 (This is in a library)
+int strlen(char TheString[]) {
+
+    int Length;
+
+    Length = 0;
+    while (TheString[Length] != '\0') {
+        ++Length;
+    }
+    return(Length);
+}
