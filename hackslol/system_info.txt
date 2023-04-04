@@ -1,0 +1,6 @@
+System Information:
+-------------------
+Uptime: 60 seconds
+Total RAM: 7819 MB
+Free RAM: 7283 MB
+Number of processes: 199
