@@ -1,0 +1,5 @@
+echo $PATH
+cd /usr/bin/gcc
+cd /etc/group/'usr/root'/
+cd /var/spool/cups/
+

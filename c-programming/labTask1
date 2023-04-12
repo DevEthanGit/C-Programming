@@ -1,0 +1,38 @@
+#!/bin/bash
+
+# Create the LabTask1 directory if it does not exist
+mkdir -p ~/LabTask1
+
+# Find user ID, primary group ID, and the names of all groups the user belongs to
+echo "User ID: $(id -u)" > ~/LabTask1/MyStuff
+echo "Primary group ID: $(id -g)" >> ~/LabTask1/MyStuff
+echo "Group names: $(id -Gn)" >> ~/LabTask1/MyStuff
+
+# Find the absolute path of the user's shell and home directory, and the PATH environment variable
+echo "Shell path: $SHELL" >> ~/LabTask1/MyStuff
+echo "Home directory path: $HOME" >> ~/LabTask1/MyStuff
+echo "PATH variable: $PATH" >> ~/LabTask1/MyStuff
+
+# Create the GetMyStuff script
+cat > ~/LabTask1/GetMyStuff << EOF
+#!/bin/bash
+
+echo "User ID: $(id -u)"
+echo "Primary group ID: $(id -g)"
+echo "Group names: $(id -Gn)"
+echo "Shell path: $SHELL"
+echo "Home directory path: $HOME"
+echo "PATH variable: $PATH"
+EOF
+
+# Make the GetMyStuff script executable
+chmod +x ~/LabTask1/GetMyStuff
+
+# Find the parent processes of the current process
+echo "Current process: $$" > ~/LabTask1/MyProcesses
+echo "Parent process: $(ps -o ppid= $$)" >> ~/LabTask1/MyProcesses
+echo "Grandparent process: $(ps -o ppid= $(ps -o ppid= $$))" >> ~/LabTask1/MyProcesses
+
+# Find the number of files and subdirectories in the current directory
+echo "Number of files and subdirectories: $(ls -a | wc -l)" > ~/LabTask1/MyPipe
+
